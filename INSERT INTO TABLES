@@ -1,0 +1,43 @@
+INSERT INTO client(clientNo,fname,lname,address,telno)
+VALUES('CL001','Cardboard Box','Company','1111 SW 8 CT MIAMI FL 33888','3058887777');
+INSERT INTO client(clientNo,fname,lname,address,telno)
+VALUES('CL002','Patty','Nuttall','3333 NW 2 TERR MIAMI FL 33999','3054441111');
+INSERT INTO client(clientNo,fname,lname,address,telno)
+VALUES('CL003','Heather','Johnson','7899 NW 3 ST MIAMI FL 33134','3059994444');
+INSERT INTO client(clientNo,fname,lname,address,telno)
+VALUES('CL004','Drew','Washington','2323 SW 2 ST CORAL GABLES FL 33111','3057479898');
+INSERT INTO client(clientNo,fname,lname,address,telno)
+VALUES('CL005','WHA Architect','Company','5454 NW 4 TERR CORAL GABLES FL 34344','3057716000');
+
+INSERT INTO Employees(staffno,fname,lname,address,telno,salary)
+VALUES('SF001','Maria','Lopez','1111 NW 3 ST MIAMI FL 33333','3052229999',21000);
+INSERT INTO Employees(staffno,fname,lname,address,telno,salary)
+VALUES('SF002','Eric','DuPoint','2222 SW 8 ST MIAMI FL 33333','3053338888',30000);
+INSERT INTO Employees(staffno,fname,lname,address,telno,salary)
+VALUES('SF003','Curt','Lynn','3333 SW 9 CT MIAMI FL 55555','3057777777',74000);
+INSERT INTO Employees(staffno,fname,lname,address,telno,salary)
+VALUES('SF004','Rachel','Jacobs','4444 NW 9 LANE MIAMI FL 77777','3055452323',67000);
+INSERT INTO Employees(staffno,fname,lname,address,telno,salary)
+VALUES('SF005','Victoria','Stevens','5555 NW 7 ST MIAMI FL 99999','3051117777',55000);
+
+INSERT INTO Equipment(equipid,equipdesc,equipusage,equipnumber,equipcost)
+VALUES('EQ001','Industrial Floor Cleaners',2,3,3000);
+INSERT INTO Equipment(equipid,equipdesc,equipusage,equipnumber,equipcost)
+VALUES('EQ002','Industrial Vacuums',5,5,5000);
+INSERT INTO Equipment(equipid,equipdesc,equipusage,equipnumber,equipcost)
+VALUES('EQ003','Chemicals',2,3,3000);
+INSERT INTO Equipment(equipid,equipdesc,equipusage,equipnumber,equipcost)
+VALUES('EQ004','Confidential Waste Containers',1,1,1000);
+INSERT INTO Equipment(equipid,equipdesc,equipusage,equipnumber,equipcost)
+VALUES('EQ005','Carpet Sweepers',2,3,5000);
+
+INSERT INTO Requirements(clientno,staffno,starttime,endtime,daysofweek)
+VALUES('CL001','SF001','7am','9am','MTWRF');
+INSERT INTO Requirements(clientno,staffno,equipid,starttime,endtime,daysofweek)
+VALUES('CL001','SF001','EQ001','5pm','7pm','MTWRF');
+INSERT INTO Requirements(clientno,staffno,equipid,starttime,endtime,daysofweek)
+VALUES('CL002','SF003','EQ003','10am','1pm','W');
+INSERT INTO Requirements(clientno,staffno,equipid,starttime,endtime,daysofweek)
+VALUES('CL003','SF004','EQ005','8pm','11pm','F');
+INSERT INTO Requirements(clientno,staffno,equipid,starttime,endtime,daysofweek)
+VALUES('CL003','SF005','EQ002','8pm','10pm','TR');
