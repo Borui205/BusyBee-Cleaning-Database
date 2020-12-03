@@ -1,0 +1,44 @@
+CREATE TABLE Client(
+clientNo VARCHAR(5) NOT NULL,
+fname VARCHAR(15) NOT NULL,
+lname VARCHAR(15) NOT NULL,
+address VARCHAR(50) NOT NULL,
+telNo VARCHAR(10) NOT NULL,
+PRIMARY KEY (clientNo)
+);
+
+CREATE TABLE Employees(
+staffNo VARCHAR(5) NOT NULL,
+fname VARCHAR(15) NOT NULL,
+lname VARCHAR(15) NOT NULL,
+address VARCHAR(50) NOT NULL,
+telNo VARCHAR(10) NOT NULL,
+salary int NOT NULL
+    CHECK(salary>=20000 AND salary <=75000),
+PRIMARY KEY (staffNo)
+);
+
+CREATE TABLE Equipment(
+equipID VARCHAR(5) NOT NULL,
+equipDesc VARCHAR(50) NOT NULL,
+equipUsage int NOT NULL
+    CHECK(equipUsage >=1),
+equipNumber int NOT NULL
+    CHECK(equipNumber >=1),
+equipCost int NOT NULL
+    CHECK(equipCost >=1),
+PRIMARY KEY (equipID)
+);
+
+CREATE TABLE Requirements(
+clientNo VARCHAR(5) NOT NULL,
+staffNo VARCHAR(5) NOT NULL,
+equipID VARCHAR(5),
+startTime VARCHAR(4) NOT NULL,
+endTime VARCHAR(4) NOT NULL, 
+daysOfWeek VARCHAR(5) NOT NULL,
+PRIMARY KEY(clientNo, startTime, endTime),
+FOREIGN KEY (clientNo) REFERENCES Client(clientNo) ON DELETE CASCADE,
+FOREIGN KEY (staffNo) REFERENCES Employees(staffNo),
+FOREIGN KEY (equipID) REFERENCES Equipment(equipID) ON DELETE CASCADE
+);
