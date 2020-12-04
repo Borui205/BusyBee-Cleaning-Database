@@ -11,12 +11,12 @@ cx_Oracle.init_oracle_client(lib_dir = "C:\\Users\\Heather\\AppData\\Local\\Prog
 
 # TODO change credentials
 # Connect as user "user" with password "mypass" to the "CSC423" service
-# running on lawtech.law.miami.edu
+# running on **************.edu
 
-dsnStr = cx_Oracle.makedsn("lawtech.law.miami.edu", "****", "csc423")
+dsnStr = cx_Oracle.makedsn("-the miami edu website-", "-the SID-", "CSC423")
 
 connection = cx_Oracle.connect(
-    user="hejocsc423", password="*********", dsn=dsnStr)
+    user="************", password="*********", dsn=dsnStr)
 cursor = connection.cursor()
 
 def theGetter():
